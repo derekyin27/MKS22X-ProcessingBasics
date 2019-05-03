@@ -37,9 +37,21 @@ class Visualizer {
     //the values in the array.
     //Negative values are red, and go below the line.
     //Positive values are green and go above the line.
-
+    int increment = 360;
+    for (int i = 0; i < values.length; i++){
+      if (values[i] > 0){
+        fill(0, 255, 0);
+        rect(x+increment, y+values[i], 40, x+values[i]);
+      }
+      if (values[i] < 0){
+        fill(255, 0, 0);
+        rect(x+increment, y+values[i]*-1, 40, y+values[i]*-1);
+      }
+      increment-=40;
+    }
     //???WRITE THIS METHOD FIRST!!!
     //THESE ARE WRONG: They just illustrate how they could look
+    
     fill(255, 0, 0);
     rect(x+40, y+100, 60, 50);
     fill(0, 255, 0);
