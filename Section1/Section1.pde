@@ -44,13 +44,13 @@ class Visualizer {
     for (int x = 0; x < values.length; x++) {
       if (values[x] >= 0) {
         fill(255, 0, 0);
-        rect(x + (x * 40), y + (100 - (values[x] * -1)), 40, values[x] * -1);
+        rect(x + (x * 40)+20, y + (100 - (values[x] * -1)), 40, values[x] * -1);
         
       }
       else {
 
         fill(0,255,0);
-        rect(x + (40 * x), 100 + y, 40, values[x]);
+        rect(x + (40 * x)+20, 100 + y, 40, values[x]);
       }
     }
 
